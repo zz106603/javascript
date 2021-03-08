@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+	<script src="common/js/jquery-3.5.1.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+	<div class="card">
+		<div class="card-header">
+			Operators
+		</div>
+		<div class="card-body">
+			<script>
+				let x = 2;
+				let result = x ** 3;
+				console.log("result", result);
+				
+				x **= 4;
+				console.log("x: ", x);
+			</script>
+			
+			<script>
+				let var1 = 3;
+				console.log(typeof var1);
+				
+				let var2 = "JavaScript";
+				console.log(typeof var2);
+				
+				let var3 = true;
+				console.log(typeof var3);
+				
+				let var4 = {name:"JavaScript"};
+				console.log(typeof var4);
+				
+				let var5 = function(){};
+				console.log(typeof var5);
+				
+				let var6 = () => {};
+				console.log(typeof var6);
+			</script>
+			
+			<script>
+				let var7 = 3;
+				let var8 = "3";
+				console.log(var7 == var8);
+				console.log(var7 === var8);
+				
+				console.log(var7 != var8);
+				console.log(var7 !== var8);
+			</script>
+			
+			<script>
+				//부정의값 || 값 => 값
+				console.log("" || "abc");
+				console.log(null || "abc");
+				console.log(var11 || 5);
+				console.log(0 || 5);
+				console.log(false || 5);
+
+				//긍정의값 || 값 => 긍정의값
+				console.log(3 || 5);
+
+				//부정의값 && 값 => 부정의값
+				console.log("" && "abc");
+				console.log(null && "abc");
+				console.log(false && "abc");
+				
+				//긍정의값 %% 값 => 값
+				console.log("a" && "abc");
+				console.log(true && "abc");
+			</script>
+		</div>
+	</div>
+</body>
+</html>
