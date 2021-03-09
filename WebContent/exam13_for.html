@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+	<script src="common/js/jquery-3.5.1.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+	
+	<script>
+	
+		const board={bno:1, btitle:"좋은날", writer:"정윤환"};
+		for(name in board){ //board : object
+			console.log(board[name]);
+		}
+		
+		let cars = ["BMW", "Volvo", "Mini"];
+		for (x of cars) { //cars: 배열
+		  console.log(x);
+		}
+		
+		
+		const boards = [
+			{bno:1, btitle:"좋은날", writer:"정윤환"},
+			{bno:2, btitle:"좋은날2", writer:"정윤환2"},
+			{bno:3, btitle:"좋은날3", writer:"정윤환3"}
+		];
+		for(board2 of boards){
+			for(name in board2){
+				console.log(board2[name]);
+			}
+		};
+		
+		
+	</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			date info
+		</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

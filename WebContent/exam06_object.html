@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+	<script src="common/js/jquery-3.5.1.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+	<script>
+		const car = {
+				type:"승용차", 
+				model:"그랜저", 
+				color:"블랙",
+				speed: 0,
+				owner: null,
+				run: function(){
+					this.setSpeed(60);
+					console.log("달립니다.");
+				},
+				setSpeed: function(speed2){
+					this.speed = speed2;
+					console.log(this.speed);
+				},
+				getSpeed: function(){
+					this.speed;	
+				},
+				sound: function(){
+					console.log("사운드");
+				},
+				
+				changeOwner: function(name){
+						this.owner = name;
+						console.log("소유주가 " + this.owner + "입니다.");
+				}
+			};
+		
+		const readProperties = () => {
+			console.log(car.type);
+			console.log(car.model);
+			console.log(car.color);
+		};
+		
+		const readProperty = (propName) => {
+			console.log(car[propName]); 
+		};
+		
+		const methodCall = () => {
+			car.run();
+			car.setSpeed(100);
+			console.log(car.getSpeed());
+			car.sound();
+			car.changeOwner("홍길동");
+			readProperties();
+		};
+	</script>
+</head>
+<body>
+
+	<div class="card">
+		<div class="card-header">
+			JavaScript Object
+		</div>
+		<div class="card-body">
+			<button onclick="readProperties()" class="btn btn-primary btn-sm">객체 속성 읽기</button>
+			<a class="btn btn-primary btn-sm" href="javascript:readProperty('model')">객체 속성 읽기</a>
+			<a class="btn btn-primary btn-sm" href="javascript:methodCall()">객체 메소드 호출</a>
+			
+		</div>
+	</div>
+</body>
+</html>

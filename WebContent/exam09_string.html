@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+	<script src="common/js/jquery-3.5.1.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+	
+	<script>
+			const ssn = "123456-1234567";
+			
+			console.log("전체 문자수:", ssn.length);
+			
+			const sex = ssn.charAt(7);
+			console.log("sex: ", sex);
+			
+			const part1 = ssn.substr(0, 6);
+			console.log(part1);
+			
+			const part2 = ssn.subString(7);
+			console.log(part2);
+			
+			const partArray = ssn.split("-");
+			console.log(partArray);
+			console.log(partArray[0]);
+			console.log(partArray[1]);
+	</script>
+</head>
+
+<body onload="handleLoad()">
+	<div class="card">
+		<div class="card-header">
+			string
+		</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>

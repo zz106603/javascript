@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+	<script src="common/js/jquery-3.5.1.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+	
+	<script>
+	
+		//forEach 반복처리
+		var fruits = ["apple", "orange", "cherry"];
+		fruits.forEach(function(item, index){
+			console.log(index, ": ", item);
+		});
+		
+		fruits.forEach((item, index) => {
+			console.log(index, ": ", item);
+		});
+		
+		fruits.forEach(item => console.log(item));
+		
+		//map 반복 처리를 해서 원래 아이템을 변형
+		var arr1 = fruits.map((item) => item.length)
+		console.log(arr1);
+		
+		//filter 반복 처리를 해서 필요없는 아이템을 제거
+		var arr2 = fruits.filter(item => {
+			if(item.startsWith("o")){
+				return false;
+			}else{
+				return true;
+			}
+		});
+		console.log(arr2);
+		
+		//reduce 반복 처리를 해서 단일값 얻기
+		var numbers1 = [45, 4, 9, 16, 25];
+		var sum = numbers1.reduce((total,value) => total + value);
+		console.log(sum);
+
+		
+	
+	</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			array iteration
+		</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>
