@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="/javascript/common/js/jquery-3.5.1.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+	
+	const changeImg1 = () => {
+		alert("바뀝니다.");
+		/* var img1 = window.document.getElementById("img1"); */
+		var img1 = document.querySelector("#img1");
+		img1.src = "/javascript/common/images/photo2.jpg";
+		
+	};
+	
+	const changeGroup1 = () => {
+		/* var group1 = document.getElementsByClassName("group1"); */
+		var group1 = document.querySelectorAll(".group1");
+		alert(group1);
+		
+		for(var i in group1){
+			group1[i].src = "/javascript/common/images/photo2.jpg";
+		}
+	};
+	
+	const changeImg = () => {
+		/* var imgs = document.getElementsByTagName("img"); */
+		var imgs = document.querySelectorAll("img");
+		for(var i in imgs){
+			imgs[i].src = "/javascript/common/images/photo5.jpg";
+		}
+	};
+	
+	changeCssSelector = () => {
+		var group1 = document.querySelectorAll("#div3 .group1");
+		for(var i in group1){
+			group1[i].src = "/javascript/common/images/photo6.jpg";
+		}
+	};
+	
+	
+	
+</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			Global Function
+		</div>
+		<div class="card-body">
+			<div>
+				<button onclick="changeImg1()" class="btn btn-primary btn-sm mb-2">그림 변경</button>
+				<br />
+				<img id="img1" src="/javascript/common/images/photo1.jpg" height="100" />
+			</div>
+			<hr />
+			<div>
+			<button onclick="changeGroup1()" class="btn btn-primary btn-sm mb-2">그림 변경</button>
+				<img class="group1" src="/javascript/common/images/photo1.jpg" height="100" />
+				<img class="group1" src="/javascript/common/images/photo1.jpg" height="100" />
+				<img class="group1" src="/javascript/common/images/photo1.jpg" height="100" />
+			</div>
+			<hr />
+			<button onclick="changeImg()" class="btn btn-primary btn-sm mb-2">그림 변경</button>
+			<hr />
+			<div id="div3">
+				<button onclick="changeCssSelector()" class="btn btn-primary btn-sm mb-2">그림 변경</button>
+				<img class="group1" src="/javascript/common/images/photo1.jpg" height="100" />
+				<img class="group1" src="/javascript/common/images/photo1.jpg" height="100" />
+				<img class="group1" src="/javascript/common/images/photo1.jpg" height="100" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

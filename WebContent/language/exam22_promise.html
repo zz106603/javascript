@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="common/js/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+ <script>
+      const fun1 = () => {
+        var promise = new Promise(function(resolve, reject) { 
+           console.log("시간을 요하는 작업....");
+           var result = false; 
+           if(result){
+              resolve(); //success callback
+           }else{
+              reject(); //failure callback
+           }
+      });
+        promise
+           .then(() => console.log("작업이 성공되었을때 실행"))
+         .catch(() => console.log("작업이 실패되었을때 실행"))
+         .finally(() => console.log("작업이 성공 또는 실패되었을때 마무리 작업 실행"));
+     };
+   </script>
+
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">콜백 이해</div>
+		<div class="card-body">
+			<button onclick="fun1()" class="btn btn-danger btn-sm">함수 호출</button>
+
+		</div>
+	</div>
+</body>
+</html>
+

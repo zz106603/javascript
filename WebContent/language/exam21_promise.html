@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+	<script src="common/js/jquery-3.5.1.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+	<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+	
+	<script>
+		
+		const fun1 = () => {
+		/* 	console.log("코드1 실행");
+			setTimeout(function(){
+				console.log("코드2 실행");
+				setTimeout(function(){
+					console.log("코드3 실행");
+				}, 2000);
+			}, 3000);
+			console.log("코드4 실행"); */
+			
+			var promise = new Promise(function(resolve, reject){
+				console.log("시간을 요하는 작업..");
+				var result = true;
+				if(result){
+					resolve(); //success callback
+				}else{
+					reject(); //failure callback
+				}
+			});
+			
+			//방법 1
+			/* promise.then(
+					function(){
+						console.log("작업 성공");
+					}, 
+					function(){
+						console.log("작업 실패");
+					});
+			 */
+			//방법 2
+			promise
+				.then(function(){
+					console.log("작업 성공");
+				})
+				.catch(function(){
+					console.log("작업 실패");
+				})
+			 	.finally(function(){
+			 		console.log("작업 마무리");
+			 	})
+		};
+		
+		
+	</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			콜백 이해
+		</div>
+		<div class="card-body">
+			<button onclick="fun1()" class="btn btn-danger btn-sm">함수 호출</button>
+			
+		</div>
+	</div>
+</body>
+</html>
+

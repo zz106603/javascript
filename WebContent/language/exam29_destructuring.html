@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="common/js/jquery-3.5.1.min.js"></script>
+<script src="common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+	//배열 구조 분해 할당 1
+	var arr1 = [10, 20];
+	var[x1, y1] = arr1;
+	console.log("x: " + x1);
+	console.log("y: " + y1);
+	
+	//배열 구조 분해 할당 2
+	var arr2 = [10, 20, 30, 40, 50];
+	var [x2, y2, ...rest] = arr2;	//rest operator
+	console.log(x2);
+	console.log(y2);
+	console.log(rest);
+	
+	var arr3 = [...arr2, 60, 70];	//spread operator
+	console.log(arr3);
+	
+	//객체 구조 분해 할당
+	var obj1 = {x:3, y:5, z:7, name:"홍길동"};
+	var {x, y} = obj1;
+	console.log(x);
+	console.log(y);
+	/* var {x, y, ...rest} = obj1;
+	console.log(rest);	//객체가 됨 */
+	
+	var obj2 = {k:9, m:10, ...obj1};
+	console.log(obj2);
+	
+	var obj3 = {... obj1, x:30};	// x값 변경
+	console.log(obj3);
+	
+	
+	
+</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">구조분해 할당 이해</div>
+		<div class="card-body"></div>
+	</div>
+</body>
+</html>
+

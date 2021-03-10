@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="/javascript/common/js/jquery-3.5.1.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+	console.log(window.innerWidth);
+	console.log(window.innerHeight);
+	
+	//window
+	function movePage(){
+		location.href = "http://www.naver.com";
+	}
+	
+	const refreshPage = () => {
+		location.reload();
+	};
+	
+	const openPopup = () => {
+		var myWindow = window.open("exam02_popup.html", "myWindow", "width=400, height=300");
+		console.log(myWindow.opener);
+		var input = myWindow.opener.document.getElementById("txtData");
+		input.value = "홍길동";
+	};
+	
+</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			Global Function
+		</div>
+		<div class="card-body">
+			<button onclick="movePage()" class="btn btn-info btn-sm">네이버</button>
+			<button onclick="refreshPage()" class="btn btn-info btn-sm">reload</button>
+			<button onclick="openPopup()" class="btn btn-info btn-sm">팝업</button>
+			<hr />
+			입력 양식 : <input type="text" id="txtData" />
+		</div>
+	</div>
+</body>
+</html>
+
