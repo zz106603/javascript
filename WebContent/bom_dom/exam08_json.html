@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="/javascript/common/js/jquery-3.5.1.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+	//javasctip 객체/배열 <=> JSON 문자열
+	const obj = {name:"정윤환", age:26, job:"개발자", adult:true};
+	const objJSON = JSON.stringify(obj);
+	console.log(objJSON);
+	
+	const objJSON2 = '{"bno":1, "title":"제목", "writer":"정윤환"}';
+	const obj2 = JSON.parse(objJSON2);
+	console.log(obj2)
+	
+	const arr3 = [{name:"정윤환", age:27}, {name:"자바", age:50}];
+	const objJSON3 = JSON.stringify(arr3);
+	console.log(objJSON3);
+	
+	const objJSON4 = '[{"name":"정윤환","age":27},{"name":"자바","age":50}]';
+	const arr4 = JSON.parse(objJSON4);
+	console.log(arr4);
+	
+	//javascript 객체의 속성을 작성
+	const name = "정윤환";
+	const age = 27;
+	const job = "개발자";
+	const adult = true;
+	const obj5 = {name: name, age: age, job: job, adult: adult};
+	const obj6 = {name, age, job, adult};
+	console.log(obj6);
+	
+</script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			json
+		</div>
+		<div class="card-body">
+			
+		</div>
+	</div>
+</body>
+</html>
+

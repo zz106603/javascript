@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="/javascript/common/js/jquery-3.5.1.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+	const handleAddClick = () => {
+		const div1 = document.querySelector("#div1");
+		div1.classList.add("alert");
+		div1.classList.add("alert-success");
+		div1.classList.add("text-danger");
+	};
+	
+	const handleRemoveClick = () => {
+		const div1 = document.querySelector("#div1");
+		div1.classList.remove("text-danger");
+	};
+	
+</script>
+</head>
+
+<body onload="init()">
+	<div class="card">
+		<div class="card-header">
+			classList 속성 사용하기
+		</div>
+		<div class="card-body">
+			<button onclick="handleAddClick()">CSS class 추가</button>
+			<button onclick="handleRemoveClick()">CSS class 삭제</button>
+			<hr />
+			<div id="div1">
+				알림 내용
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

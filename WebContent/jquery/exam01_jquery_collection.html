@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="/javascript/common/js/jquery-3.5.1.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+	const handleClick1 = () => {
+		var mydiv = $(".mydiv");
+		mydiv.css("background-color", "yellow");
+		mydiv.html("<img src='/javascript/common/images/photo2.jpg' width='50'>");
+	}; 
+	
+	const handleClick2 = () => {
+		var myred = $(".my-red");
+		myred.css("background-color", "blue");
+	}; 
+	
+	const handleClick3 = () => {
+		var imgBox = $("#imgBox1, #imgBox2");
+		imgBox.append("<img src='/javascript/common/images/photo1.jpg' height='100'>");
+
+	}
+
+	
+</script>
+<style>
+	.mydiv{
+		width:100px;
+		height:100px;
+		display:inline-block;
+		border:1px solid black;
+		margin:10px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="card">
+		<div class="card-header">
+			jquery collection
+		</div>
+		
+		<div class="card-body">
+		<button class="btn btn-danger btn-sm mb-2" onclick="handleClick1()">전체 배경</button>
+		<button class="btn btn-danger btn-sm mb-2" onclick="handleClick2()">my-red div 배경</button>
+		<button class="btn btn-danger btn-sm mb-2" onclick="handleClick3()">이미지 추가</button>
+		<hr />
+		<div class="mydiv"></div>
+		<div class="mydiv"></div>
+		<div class="mydiv my-red"></div>
+		<div class="mydiv my-red"></div>
+		<div class="mydiv my-red"></div>
+		<hr />
+		<div id="imgBox1"></div>
+		<div id="imgBox2"></div>
+		</div>
+	</div>
+</body>
+</html>
+

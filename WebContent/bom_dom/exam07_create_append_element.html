@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/javascript/common/bootstrap-4.6.0/css/bootstrap.min.css">
+<script src="/javascript/common/js/jquery-3.5.1.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="/javascript/common/bootstrap-4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+	const handleAddElement1 = () => {
+		const div1 = document.querySelector("#div1");
+		div1.innerHTML = "<p>그림<img src='/javascript/common/images/photo1.jpg' height='100'><p>";
+	};	
+	
+	const handleAddElement2 = () => {
+	
+		const elementP = document.createElement("p");
+		const textNode = document.createTextNode("그림");
+		const elementImg = document.createElement("img");
+		elementImg.setAttribute("src", "/javascript/common/images/photo1.jpg");
+		elementImg.setAttribute("height", "100");
+		
+		elementP.appendChild(textNode);
+		elementP.appendChild(elementImg);
+		
+		const div2 = document.querySelector("#div2");
+		div2.appendChild(elementP);
+	};
+	
+	
+	const handleAddElement3 = (text, imgFile) => {
+		const div3 = document.querySelector("#div3");
+		/* div3.innerHTML = "<p>" + text +"<img src='/javascript/common/images/" + imgFile + "' height='100' /></p>"; */
+		div3.innerHTML = `<p>${text}<img src='/javascript/common/images/${imgFile}' height='100' /></p>`;
+	};
+	
+</script>
+</head>
+
+<body onload="init()">
+	<div class="card">
+		<div class="card-header">
+			addElement 속성 사용하기
+		</div>
+		<div class="card-body">
+			<button onclick="handleAddElement1()" class="btn btn-info btn-sm">동적 엘리먼트 추가</button>
+			<button onclick="handleAddElement2()" class="btn btn-info btn-sm">동적 엘리먼트 추가2</button>
+			<button onclick="handleAddElement3('그림', 'photo3.jpg')" class="btn btn-info btn-sm">동적 엘리먼트 추가2</button>
+			<hr />
+			<div id="div1">
+			</div>
+			<div id="div2">
+			</div>
+			<div id="div3">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
